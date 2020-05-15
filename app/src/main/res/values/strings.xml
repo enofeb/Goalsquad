@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Goalsquad</string>
+    <string name="title_dashboard">Dashboard</string>
 </resources>
