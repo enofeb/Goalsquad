@@ -1,6 +1,4 @@
 rootProject.name='Goalsquad'
 include ':app'
-include ':base'
 include ':base:core'
-include ':feature'
 include ':feature:dashboard'
