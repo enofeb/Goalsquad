@@ -31,5 +31,10 @@ open class BaseActivity : AppCompatActivity() {
                 transaction.commit()
             }
         }
+        initActivity(savedInstanceState)
+    }
+
+    open fun initActivity(savedInstanceState: Bundle?) {
+
     }
 }
