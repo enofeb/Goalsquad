@@ -1,4 +1,4 @@
-package com.example.core.base
+package com.example.core.com.example.core.base.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import com.example.core.Constants
+import com.example.core.base.Constants
 
 abstract class BaseFragment : Fragment() {
 

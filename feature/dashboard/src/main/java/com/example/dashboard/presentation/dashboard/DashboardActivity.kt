@@ -1,7 +1,7 @@
 package com.example.dashboard.presentation.dashboard
 
 import android.os.Bundle
-import com.example.core.base.BaseActivity
+import com.example.core.base.base.BaseActivity
 import com.example.dashboard.R
 
 class DashboardActivity : BaseActivity() {
