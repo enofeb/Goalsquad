@@ -1,6 +1,7 @@
 package com.example.core.base
 
 import android.os.Bundle
+import androidx.annotation.CallSuper
 import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
@@ -17,8 +18,18 @@ open class BaseActivity : AppCompatActivity() {
 
     open fun provideInitialFragment(): Fragment? = null
 
+    @CallSuper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutRes)
+
+        provideInitialFragment()?.let {
+            if (savedInstanceState == null) {
+                //Extension
+                val transaction = supportFragmentManager.beginTransaction()
+                transaction.replace(containerId, it)
+                transaction.commit()
+            }
+        }
     }
 }
