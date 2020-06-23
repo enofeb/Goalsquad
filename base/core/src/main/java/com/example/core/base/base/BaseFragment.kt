@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
+import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import com.example.core.base.Constants
 
 abstract class BaseFragment : Fragment() {
 
+    @StringRes
     open val titleRes = Constants.NO_RES
 
     @LayoutRes
