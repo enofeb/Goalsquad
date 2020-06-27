@@ -11,8 +11,7 @@ class HomeActivity : BaseActivity() {
 
     override fun initActivity(savedInstanceState: Bundle?) {
         super.initActivity(savedInstanceState)
-        val i = Intent(this, DashboardActivity::class.java)
-        startActivity(i)
+        navigationController.navigateToDashboard()
     }
 
 }
