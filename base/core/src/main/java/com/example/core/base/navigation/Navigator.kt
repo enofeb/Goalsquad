@@ -1,6 +1,7 @@
 package com.example.core.base.navigation
 
 import android.content.Intent
+import androidx.fragment.app.Fragment
 
 const val PACKAGE_NAME = "com.example.goalsquad"
 private val classes = mutableMapOf<String, Class<*>>()
@@ -22,6 +23,12 @@ private fun <T> String.getFeature(): Class<out T>? =
 
 fun String.createIntentFeature() = try {
     Class.forName(this).run { intentTo(this@createIntentFeature) }
+} catch (e: ClassNotFoundException) {
+    null
+}
+
+fun String.createFragmentFeature() = try {
+    this.getFeature<Fragment>()?.newInstance()
 } catch (e: ClassNotFoundException) {
     null
 }
