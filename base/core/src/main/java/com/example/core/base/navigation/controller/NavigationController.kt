@@ -10,6 +10,6 @@ interface NavigationController {
 
     fun finish() = activity.get()?.finish()
 
-    fun navigateToDashboard() = activity.get()?.startActivity(Dashboard.dynamicStart)
+    fun navigateToDashboard() = activity.get()?.startActivity(Dashboard.dynamicStart())
 
 }

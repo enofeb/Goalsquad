@@ -35,6 +35,3 @@ fun String.createFragmentFeature() = try {
     null
 }
 
-inline fun FragmentManager.transact(fmTransaction: FragmentTransaction.() -> FragmentTransaction) {
-    beginTransaction().fmTransaction().commit()
-}
