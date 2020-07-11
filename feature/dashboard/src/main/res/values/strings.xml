@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="dashboard_title_home">Home</string>
+    <string name="dashboard_title_matches">Matches</string>
+    <string name="dashboard_title_stats">Stats</string>
+    <string name="dashboard_title_transfers">Transfers</string>
 </resources>

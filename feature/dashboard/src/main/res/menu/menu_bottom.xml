@@ -3,15 +3,15 @@
     <item
         android:id="@+id/navigation_first"
         android:icon="@drawable/ic_home"
-        android:title="@string/dashboard_title_home" />
+        android:title="@string/dashboard_title_matches" />
 
     <item
         android:id="@+id/navigation_second"
         android:icon="@drawable/ic_home"
-        android:title="@string/dashboard_title_home" />
+        android:title="@string/dashboard_title_stats" />
 
     <item
         android:id="@+id/navigation_third"
         android:icon="@drawable/ic_home"
-        android:title="@string/dashboard_title_home" />
+        android:title="@string/dashboard_title_transfers" />
 </menu>
