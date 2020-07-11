@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/base/core" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/dashboard" />
+            <option value="$PROJECT_DIR$/feature/matches" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
