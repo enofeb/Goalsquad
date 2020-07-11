@@ -2,6 +2,8 @@ package com.example.core.base.navigation
 
 import android.content.Intent
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 
 const val PACKAGE_NAME = "com.example.goalsquad"
 private val classes = mutableMapOf<String, Class<*>>()
@@ -33,3 +35,6 @@ fun String.createFragmentFeature() = try {
     null
 }
 
+inline fun FragmentManager.transact(fmTransaction: FragmentTransaction.() -> FragmentTransaction) {
+    beginTransaction().fmTransaction().commit()
+}

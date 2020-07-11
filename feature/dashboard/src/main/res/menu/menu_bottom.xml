@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_first"
+        android:id="@+id/navigation_matches"
         android:icon="@drawable/ic_home"
         android:title="@string/dashboard_title_matches" />
 
     <item
-        android:id="@+id/navigation_second"
+        android:id="@+id/navigation_stats"
         android:icon="@drawable/ic_home"
         android:title="@string/dashboard_title_stats" />
 
     <item
-        android:id="@+id/navigation_third"
+        android:id="@+id/navigation_transfers"
         android:icon="@drawable/ic_home"
         android:title="@string/dashboard_title_transfers" />
 </menu>
