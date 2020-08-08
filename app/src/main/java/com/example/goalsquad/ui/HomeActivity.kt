@@ -1,9 +1,8 @@
-package com.example.goalsquad
+package com.example.goalsquad.ui
 
-import android.content.Intent
 import android.os.Bundle
 import com.example.core.base.base.BaseActivity
-import com.example.dashboard.presentation.dashboard.DashboardActivity
+import com.example.goalsquad.R
 
 class HomeActivity : BaseActivity() {
 
