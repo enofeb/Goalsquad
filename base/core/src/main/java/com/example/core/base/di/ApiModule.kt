@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
 
 private const val GOAL_SQUAD_URL = "goal_squad_url"
 private const val GOAL_SQUAD_CLIENT = "goal_squad_client"
-private const val GOAL_SQUAD_RETROFIT = "goal_squad_client"
+const val GOAL_SQUAD_RETROFIT = "goal_squad_client"
 
 val apiModule = module {
     factory(named(GOAL_SQUAD_URL)) {
