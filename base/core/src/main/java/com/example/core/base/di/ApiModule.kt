@@ -3,6 +3,7 @@ package com.example.core.base.di
 import com.example.core.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.qualifier.named
@@ -48,8 +49,12 @@ fun provideLoggingInterceptor(): HttpLoggingInterceptor =
 
 fun provideOkHttpClient(loggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
     val okHttpClientBuilder = OkHttpClient.Builder().apply {
-        // addInterceptor(KeyInter)
         addInterceptor(loggingInterceptor)
+        addInterceptor(Interceptor { chain ->
+            val builder = chain.request().newBuilder()
+            builder.header("X-Auth-Token", BuildConfig.API_KEY)
+            return@Interceptor chain.proceed(builder.build())
+        })
         connectTimeout(30, TimeUnit.SECONDS)
         readTimeout(30, TimeUnit.SECONDS)
     }
