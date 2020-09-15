@@ -18,17 +18,17 @@ class MatchesHomeFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        doAsync {
-            service.getMatches().execute()
-        }.execute()
+//        doAsync {
+//            service.getMatches().execute()
+//        }.execute()
     }
 
-    class doAsync(val handler: () -> Unit) : AsyncTask<Void, Void, Void>() {
-        override fun doInBackground(vararg params: Void?): Void? {
-            handler()
-            return null
-        }
-    }
+//    class doAsync(val handler: () -> Unit) : AsyncTask<Void, Void, Void>() {
+//        override fun doInBackground(vararg params: Void?): Void? {
+//            handler()
+//            return null
+//        }
+//    }
 
     companion object {
         fun newInstance() =
