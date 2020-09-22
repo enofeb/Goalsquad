@@ -3,6 +3,9 @@ package com.example.goalsquad.ui
 import android.os.Bundle
 import com.example.core.base.base.BaseActivity
 import com.example.goalsquad.R
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class HomeActivity : BaseActivity() {
 
