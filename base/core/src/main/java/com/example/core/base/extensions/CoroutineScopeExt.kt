@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-fun CoroutineScope.io(codeBlock: () -> Unit) {
+fun CoroutineScope.io(codeBlock: suspend CoroutineScope.() -> Unit) {
     this.launch {
         withContext(Dispatchers.IO) {
             codeBlock()

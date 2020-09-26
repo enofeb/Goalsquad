@@ -2,6 +2,8 @@ package com.example.matches.presentation
 
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.Observer
+import com.example.core.base.model.DataHolder
 import com.example.core.base.repository.matches.MatchesRepository
 import com.example.core.com.example.core.base.base.BaseFragment
 import com.example.matches.R
@@ -16,6 +18,17 @@ class MatchesHomeFragment : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+    }
+
+    //Replaced it to base class and create observe method
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel.getMatches()
+        viewModel.matchListLiveData.observe(viewLifecycleOwner, Observer {
+            if (it is DataHolder.Success) {
+                Log.e("MATCHES", it.data.toString())
+            }
+        })
     }
 
     companion object {

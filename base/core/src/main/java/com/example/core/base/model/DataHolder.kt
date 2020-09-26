@@ -9,6 +9,6 @@ sealed class DataHolder<out T : Any?> {
 
     data class Fail(val e: Error) : DataHolder<Nothing>()
 
-    object Loading : DataHolder<Nothing>()
+    data class Loading<out T : Any?>(val data: T? = null) : DataHolder<T?>()
 
 }
