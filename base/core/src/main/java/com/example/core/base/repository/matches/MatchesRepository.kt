@@ -6,6 +6,4 @@ import kotlinx.coroutines.flow.Flow
 
 interface MatchesRepository {
     suspend fun getMatches(): DataHolder<MatchesResponse?>
-
-    fun getMatchesFlow(): Flow<MatchesResponse?>
 }

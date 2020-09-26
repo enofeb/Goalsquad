@@ -18,9 +18,4 @@ class MatchesRepositoryImpl(private val matchesServices: MatchesServices) : Repo
         }
     }
 
-    override fun getMatchesFlow(): Flow<MatchesResponse?> = flow {
-        emit(matchesServices.getMatches())
-    }.map {
-        it
-    }
 }

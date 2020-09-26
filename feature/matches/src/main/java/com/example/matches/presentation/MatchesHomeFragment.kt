@@ -18,31 +18,12 @@ class MatchesHomeFragment : BaseFragment() {
 
     override fun getLayoutRes() = R.layout.fragment_matches_home
 
-
     val matchesRepo: MatchesRepository by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        doAsync {
-//            service.getMatches().execute()
-//        }.execute()
-
-
-        CoroutineScope(Dispatchers.IO).launch {
-            matchesRepo.getMatchesFlow().collect { value ->
-                Log.e("HEY", value.toString())
-            }
-        }
     }
-
-//    class doAsync(val handler: () -> Unit) : AsyncTask<Void, Void, Void>() {
-//        override fun doInBackground(vararg params: Void?): Void? {
-//            handler()
-//            return null
-//        }
-//    }
-
 
     companion object {
         fun newInstance() =
