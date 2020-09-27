@@ -5,7 +5,7 @@ import com.example.core.base.navigation.createFragmentFeature
 
 object MatchesHome : Feature<Fragment> {
 
-    private const val MATCHES_HOME = "com.example.matches.presentation.MatchesHomeFragment"
+    private const val MATCHES_HOME = "com.example.matches.presentation.matches.MatchesHomeFragment"
 
     override val key: String
         get() = "1"

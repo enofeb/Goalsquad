@@ -1,4 +1,4 @@
-package com.example.matches.presentation
+package com.example.matches.presentation.matches
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

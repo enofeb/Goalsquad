@@ -1,4 +1,4 @@
-package com.example.matches.presentation
+package com.example.matches.presentation.matches
 
 import android.util.Log
 import androidx.lifecycle.Observer
