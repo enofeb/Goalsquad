@@ -26,7 +26,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        navigationController = DefaultNavigationController(WeakReference(activity!!))
+        navigationController = DefaultNavigationController(WeakReference(requireActivity()))
     }
 
     override fun onCreateView(
@@ -39,5 +39,18 @@ abstract class BaseFragment : Fragment() {
         }
         return super.onCreateView(inflater, container, savedInstanceState)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initView()
+        fetchData()
+        observeData()
+    }
+
+    open fun initView() {}
+
+    open fun fetchData() {}
+
+    open fun observeData() {}
 
 }

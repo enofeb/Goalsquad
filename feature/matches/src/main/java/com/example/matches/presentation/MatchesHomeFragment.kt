@@ -16,19 +16,18 @@ class MatchesHomeFragment : BaseFragment() {
 
     override fun getLayoutRes() = R.layout.fragment_matches_home
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    //Replaced it to base class and create observe method
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel.getMatches()
+    override fun observeData() {
+        super.observeData()
         viewModel.matchListLiveData.observe(viewLifecycleOwner, Observer {
             if (it is DataHolder.Success) {
                 Log.e("MATCHES", it.data.toString())
             }
         })
+    }
+
+    override fun fetchData() {
+        super.fetchData()
+        viewModel.getMatches()
     }
 
     companion object {
