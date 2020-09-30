@@ -11,17 +11,17 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorRed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="40dp"
         tools:text="FENERBAHCE" />
 
     <TextView
         android:id="@+id/textViewAwayTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:textColor="@color/colorRed"
-        app:layout_constraintStart_toEndOf="@id/textViewHomeTeam"
-        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ARSENAL" />
 
