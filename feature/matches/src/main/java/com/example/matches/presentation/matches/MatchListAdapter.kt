@@ -23,8 +23,8 @@ class MatchListAdapter : RecyclerView.Adapter<MatchListAdapter.MatchListViewHold
 
     override fun onBindViewHolder(holder: MatchListViewHolder, position: Int) {
         val match = items[position]
-        holder.itemView.textViewHomeTeam.text = match?.homeTeam?.name
-        holder.itemView.textViewAwayTeam.text = match?.awayTeam?.name
+        holder.itemView.textViewHomeTeamName.text = match?.homeTeam?.name
+        holder.itemView.textViewAwayTeamName.text = match?.awayTeam?.name
     }
 
     fun updateItems(items: MutableList<Match?>?) {
