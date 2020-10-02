@@ -25,6 +25,11 @@ class MatchListAdapter : RecyclerView.Adapter<MatchListAdapter.MatchListViewHold
         val match = items[position]
         holder.itemView.textViewHomeTeamName.text = match?.homeTeam?.name
         holder.itemView.textViewAwayTeamName.text = match?.awayTeam?.name
+        holder.itemView.textViewHomeScore.text =
+            match?.score?.fullTimeResult?.homeTeamFullScore.toString()
+        holder.itemView.textViewAwayScore.text =
+            match?.score?.fullTimeResult?.awayTeamFullScore.toString()
+
     }
 
     fun updateItems(items: MutableList<Match?>?) {

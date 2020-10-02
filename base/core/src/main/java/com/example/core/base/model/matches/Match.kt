@@ -5,5 +5,6 @@ import com.google.gson.annotations.SerializedName
 data class Match(
     @SerializedName("id") val id: Int?,
     @SerializedName("homeTeam") val homeTeam: HomeTeam?,
-    @SerializedName("awayTeam") val awayTeam: AwayTeam?
+    @SerializedName("awayTeam") val awayTeam: AwayTeam?,
+    @SerializedName("score") val score: Score?
 )
