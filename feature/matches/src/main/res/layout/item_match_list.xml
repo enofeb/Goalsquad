@@ -10,9 +10,10 @@
         android:id="@+id/textViewHomeTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="@dimen/ex_large_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
         android:textColor="@color/colorRed"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewHomeScore"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="FENERBAHCE" />
 
@@ -20,9 +21,10 @@
         android:id="@+id/textViewHomeScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="@dimen/ex_large_margin"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintStart_toEndOf="@id/textViewHomeTeamName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="2" />
 
@@ -30,20 +32,21 @@
         android:id="@+id/textViewAwayScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="@dimen/ex_large_margin"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toStartOf="@id/textViewAwayTeamName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="1" />
-
 
     <TextView
         android:id="@+id/textViewAwayTeamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/ex_large_margin"
         android:textColor="@color/colorRed"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewAwayScore"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="ARSENAL" />
 
