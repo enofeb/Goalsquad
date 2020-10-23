@@ -17,10 +17,10 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigation"
+            android:theme="@style/BottomNavigationTheme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@color/colorPrimaryDark"
             app:menu="@menu/menu_bottom" />
 
 
